@@ -10,7 +10,7 @@ function ThemeContextProvider({ children }) {
     useEffect(() => {
         const getSavedTheme = () => {
             const savedTheme = JSON.parse(localStorage.getItem("theme"));
-            setTheme(savedTheme);
+            setTheme(savedTheme === "light" ? light : dark);
         };
 
         getSavedTheme();
@@ -18,7 +18,7 @@ function ThemeContextProvider({ children }) {
 
     useEffect(() => {
         const saveTheme = () =>
-            localStorage.setItem("theme", JSON.stringify(theme));
+            localStorage.setItem("theme", JSON.stringify(theme.title));
 
         saveTheme();
     }, [theme]);
