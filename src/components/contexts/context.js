@@ -8,13 +8,18 @@ function ThemeContextProvider({ children }) {
     const [theme, setTheme] = useState(light);
 
     useEffect(() => {
-        const currentTheme = JSON.parse(localStorage.getItem("theme"));
-        setTheme(currentTheme);
+        const getSavedTheme = () => {
+            const savedTheme = JSON.parse(localStorage.getItem("theme"));
+            setTheme(savedTheme);
+        };
+
+        getSavedTheme();
     }, []);
 
     useEffect(() => {
         const saveTheme = () =>
             localStorage.setItem("theme", JSON.stringify(theme));
+
         saveTheme();
     }, [theme]);
 
