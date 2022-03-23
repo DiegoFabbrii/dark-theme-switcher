@@ -10,7 +10,6 @@ function HeaderComponent() {
 
     return (
         <Header>
-            <h1>logo</h1>
             <Switch
                 checked={title === "dark"}
                 onChange={themeHandler}
