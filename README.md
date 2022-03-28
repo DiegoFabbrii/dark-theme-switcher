@@ -73,6 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 > ## Tecnologias usadas
 > 
 > * React
-> *Styled-components
+> * Styled-components
 
-[link para o projeto]: (https://dark-theme-switcher-seven.vercel.app/)
+[link para o projeto](https://dark-theme-switcher-seven.vercel.app/)
